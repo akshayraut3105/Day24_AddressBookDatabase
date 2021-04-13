@@ -1,10 +1,6 @@
-  
---UC 5 : Ability to delete existing contact person using their name 
+--UC 6 : Ability to retrieve person belonging to a city or state from address book table
 
 use addressbook_service;
 select * from addressbook;
---Edit and Update data of an existing contact
-delete from addressbook  where FirstName='Steve' and LastName='Rogers';
-
--- displaying table
-select * from addressbook;
+--Retrieve details of people belonging to either city Surat or state Tripura
+select * from addressbook where State_Name='Tripura' or City='Surat';
