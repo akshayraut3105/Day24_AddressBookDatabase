@@ -1,7 +1,9 @@
---UC 10 : Ability to get number of contact persons i.e. count by type
+--UC 11 : Ability to add person to both Friend and Family
 
 use addressbook_service;
 select * from addressbook;
-
---Getting number of contact persons for each ContactType
-select ContactType,Count(ContactType) as NumberOfContacts from addressbook group by ContactType;
+--Adding the same person to both friend and family types
+insert into addressbook values
+('Tony','Stark','Block_2','Surat','Gujrat',2233225,5544554433,'tony.stark@yahoo.com','Akash','FAMILY');
+--Retrieving details of the duplicated contact
+select * from addressbook where FirstName='Tony' and LastName='Stark';
