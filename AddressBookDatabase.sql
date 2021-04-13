@@ -1,3 +1,16 @@
---UC 1 : Ability to create Address Book Service DB 
---Creating new database
-create database addressbook_service;
+--UC 2 : Ability to create address book table 
+
+use addressbook_service;
+--Creating address_book table
+create table address_book
+(FirstName varchar(100) not null,
+LastName varchar(100),
+Address varchar(500) not null,
+City varchar(50) not null,
+State varchar(50) not null,
+Zip int not null,
+PhoneNo int not null,
+Email varchar(200) not null
+);
+--Retrieving data from table
+select * from address_book;;
